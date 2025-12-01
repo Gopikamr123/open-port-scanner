@@ -14,10 +14,9 @@ try:
 
     print(f"[+] Starting scan on {TARGET_HOST} for ports {TARGET_PORTS} with arguments: {OPTIONS}")
     
-    # Run the scan
+
     nm.scan(TARGET_HOST, TARGET_PORTS, arguments=OPTIONS)
 
-    # Check if the host was found and scanned
     if not nm.all_hosts():
         print("-" * 50)
         print(f"[!] Scan returned NO HOSTS. Check if {TARGET_HOST} is online or if your firewall is blocking Nmap.")
